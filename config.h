@@ -1,9 +1,9 @@
 /* See LICENSE file for copyright and license details. */
 
 /* audio constants */
-static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%", "&", "sh", ".dwm/master.sh", "volumenotify", NULL };
-static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%", "&", "sh", ".dwm/master.sh", "volumenotify", NULL };
-static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL };
+static const char *upvol[]   = { "sh", ".dwm/master.sh", "upvol", NULL };
+static const char *downvol[] = { "sh", ".dwm/master.sh", "downvol", NULL };
+static const char *mutevol[] = { "sh", ".dwm/master.sh", "mutevol", NULL };
 
 /* brightness constants */
 static const char *upbrightness[]     = { "sh", ".dwm/master.sh", "brightinc", NULL };
