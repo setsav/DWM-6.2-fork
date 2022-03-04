@@ -36,10 +36,10 @@ static const char col_gray2[]       = "#002b36";
 static const char col_gray3[]       = "#268bd2";
 
 //current tag and window font color
-static const char col_gray4[]       = "#002b36";
+static const char col_gray4[]       = "#93a1a1";
 
 //top bar color and active window border
-static const char col_cyan[]        = "#93a1a1";
+static const char col_cyan[]        = "#002b36";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -49,7 +49,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 //static const char *tags[] = { "", "", "", "", "", "", "", "", "", };
-static const char *tags[] = { "", "", "", "", "", };
+static const char *tags[] = { "", "", "", "", "", };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -72,9 +72,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "tile",     tile },    /* first entry is default */
-	{ "mono",     monocle },
-	{ "spiral",   spiral },
+	{ "·",     tile },    /* first entry is default */
+	{ "··",     monocle },
+	{ "···",   spiral },
 	{ "[\\]",     dwindle },
 	{ "H[]",      deck },
 	{ "TTT",      bstack },
