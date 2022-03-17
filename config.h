@@ -49,7 +49,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 //static const char *tags[] = { "", "", "", "", "", "", "", "", "", };
-static const char *tags[] = { "", "", "", "", "", };
+static const char *tags[] = { "", "", "", "", "", };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -72,9 +72,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "·",     tile },    /* first entry is default */
-	{ "··",     monocle },
-	{ "···",   spiral },
+	{ "ₜ",        tile },    /* first entry is default */
+	{ "ₘ",        monocle },
+	{ "ₛ",        spiral },
 	{ "[\\]",     dwindle },
 	{ "H[]",      deck },
 	{ "TTT",      bstack },
@@ -103,17 +103,18 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "sh", ".dwm/master.sh", "appmenu", NULL };
+static const char *dmenurun[] = { "dmenu_run", NULL };
 // static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st" ,NULL };
-static const char *browser[]  = { "firejail", "chromium", NULL };
-static const char *discord[]  = { "firejail", "discord", NULL };
-static const char *fileman[]  = { "st", "-t", "termfloat", "-e", "ranger", NULL };
-static const char *volmix[]   = { "st", "-t", "termfloat", "-e", "ncpamixer", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
+static const char *browser[]  = { "io.gitlab.librewolf-community", NULL };
+static const char *discord[]  = { "discord", NULL };
+static const char *fileman[]  = { "alacritty", "-t", "termfloat", "-e", "ranger", NULL };
+static const char *volmix[]   = { "alacritty", "-t", "termfloat", "-e", "ncpamixer", NULL };
 static const char *fileman2[] = { "thunar", NULL };
 static const char *powermenu[] = { "sh", ".dwm/master.sh", "powermenu", NULL };
 static const char *bluetmenu[] = { "sh", ".dwm/master.sh", "btmenu", NULL };
 static const char *emojimenu[] = { "rofimoji", "-a", "clipboard",  NULL };
-static const char *sysmon[]   = { "st", "-t", "termfloat", "-e", "htop", NULL };
+static const char *sysmon[]   = { "alacritty", "-t", "termfloat", "-e", "htop", NULL };
 static const char *screenshot[] = { "scrot", "/home/exaset/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png", NULL };
 static const char *vinote[] = { "sh", ".dwm/master.sh", "vinote", NULL };
 static const char *calc[] = { "gnome-calculator", NULL };
@@ -198,6 +199,7 @@ static Key keys[] = {
         { MODKEY,                       XK_e,      spawn,          {.v = emojimenu } },	
         { MODKEY,                       XK_Escape, spawn,          {.v = sysmon } },	        
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = calc } },	
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = dmenurun } },
 };
 
 /* button definitions */
