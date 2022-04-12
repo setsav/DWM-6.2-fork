@@ -12,10 +12,10 @@ static const char *downbrightness[]   = { "sh", ".dwm/master.sh", "brightdec", N
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 30;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 30;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 30;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 30;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 0;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 0;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 0;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 0;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -57,9 +57,10 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ NULL,       NULL,      "termfloat", 0,            1,           -1 },
+	{ NULL,       NULL,      "termfloat",  0,            1,           -1 },
 	{ NULL,       NULL,      "Calculator", 0,            1,           -1 },
-	{ NULL,       NULL,      "rofi",      0,            1,           -1 },
+	{ NULL,       NULL,      "MEGAsync",   0,            1,           -1 },
+	{ NULL,       NULL,      "rofi",       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -106,7 +107,7 @@ static const char *dmenucmd[] = { "sh", ".dwm/master.sh", "appmenu", NULL };
 static const char *dmenurun[] = { "dmenu_run", NULL };
 // static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *browser[]  = { "io.gitlab.librewolf-community", NULL };
+static const char *browser[]  = { "librewolf", NULL };
 static const char *discord[]  = { "discord", NULL };
 static const char *fileman[]  = { "alacritty", "-t", "termfloat", "-e", "ranger", NULL };
 static const char *volmix[]   = { "alacritty", "-t", "termfloat", "-e", "ncpamixer", NULL };
@@ -114,7 +115,7 @@ static const char *fileman2[] = { "thunar", NULL };
 static const char *powermenu[] = { "sh", ".dwm/master.sh", "powermenu", NULL };
 static const char *bluetmenu[] = { "sh", ".dwm/master.sh", "btmenu", NULL };
 static const char *emojimenu[] = { "rofimoji", "-a", "clipboard",  NULL };
-static const char *sysmon[]   = { "alacritty", "-t", "termfloat", "-e", "htop", NULL };
+static const char *sysmon[]   = { "alacritty", "-t", "termfloat", "-e", "btop", NULL };
 static const char *screenshot[] = { "scrot", "/home/exaset/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png", NULL };
 static const char *vinote[] = { "sh", ".dwm/master.sh", "vinote", NULL };
 static const char *calc[] = { "gnome-calculator", NULL };
