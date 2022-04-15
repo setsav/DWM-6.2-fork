@@ -27,19 +27,19 @@ static const char *fonts[]          = { "monospace:size=12", "fontawesome:size=1
 static const char dmenufont[]       = "monospace:size=12";
 
 //bg color
-static const char col_gray1[]       = "#002b36";
+static const char col_gray1[]       = "#000000";
 
 //inactive window border color
-static const char col_gray2[]       = "#002b36";
+static const char col_gray2[]       = "#000000";
 
 //font color
-static const char col_gray3[]       = "#268bd2";
+static const char col_gray3[]       = "#808080";
 
 //current tag and window font color
-static const char col_gray4[]       = "#002b36";
+static const char col_gray4[]       = "#000000";
 
 //top bar color and active window border
-static const char col_cyan[]        = "#93a1a1";
+static const char col_cyan[]        = "#ffffff";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
